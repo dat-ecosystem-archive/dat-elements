@@ -1,4 +1,4 @@
-const base = require('base-elements')
+const baseAvatar = require('base-elements/avatar')
 const css = require('sheetify')
 
 const styles = css`
@@ -19,5 +19,5 @@ function avatar (opts) {
   opts = opts || {}
 
   const theme = opts.theme || 'green'
-  return base.avatar({ class: styles + ' ' + theme })
+  return baseAvatar({ class: styles + ' ' + theme })
 }
