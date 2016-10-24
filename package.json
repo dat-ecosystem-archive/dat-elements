@@ -4,6 +4,7 @@
   "description": "Dat UI elements",
   "main": "index.js",
   "scripts": {
+    "start": "bankai start --entry=example/index.js --js.transform=sheetify/transform --port 8088",
     "deps": "dependency-check . && dependency-check . --extra --no-dev",
     "test": "standard && npm run deps && NODE_ENV=test node test",
     "test:cov": "standard && npm run deps && NODE_ENV=test istanbul cover test.js"
@@ -17,8 +18,13 @@
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {
+    "bankai": "^3.3.1",
+    "base-elements": "^1.1.2",
+    "choo": "^4.0.0-2",
     "dependency-check": "^2.6.0",
     "istanbul": "^0.4.5",
+    "sheetify": "^5.1.1",
+    "tachyons": "^4.5.4",
     "tape": "^4.6.2"
   }
 }
