@@ -1,0 +1,24 @@
+{
+  "name": "dat-elements",
+  "version": "1.0.0",
+  "description": "Dat UI elements",
+  "main": "index.js",
+  "scripts": {
+    "deps": "dependency-check . && dependency-check . --extra --no-dev",
+    "test": "standard && npm run deps && NODE_ENV=test node test",
+    "test:cov": "standard && npm run deps && NODE_ENV=test istanbul cover test.js"
+  },
+  "repository": "datproject/dat-elements",
+  "keywords": [
+    "elements",
+    "dat",
+    "ui"
+  ],
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "dependency-check": "^2.6.0",
+    "istanbul": "^0.4.5",
+    "tape": "^4.6.2"
+  }
+}
