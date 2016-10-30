@@ -1,14 +1,14 @@
 const baseAvatar = require('base-elements/avatar')
 const css = require('sheetify')
+const xtend = require('xtend')
 
 const styles = css('./avatar.css')
 
 module.exports = avatar
 
-console.log(styles)
-
 // Dat UI elements
-// null -> null
-function avatar (opts) {
-  return baseAvatar({ style: styles })
+// (str, obj?) -> html
+function avatar (src, opts) {
+  const args = xtend(opts, {class: styles})
+  return baseAvatar(src, args)
 }
