@@ -1,19 +1,16 @@
-const avatar = require('../avatar')
-const progress = require('../progress')
 const mount = require('choo/mount')
 const css = require('sheetify')
 const html = require('bel')
 
-css('tachyons')
+const progress = require('../progress')
+const avatar = require('../avatar')
 
-console.log(progress)
+css('tachyons')
 
 const els = [
   el('avatar', avatar('http://placekitten.com/200/200', { size: 3 })),
   el('progress', progress(0.75, { class: 'blue' }))
 ]
-
-console.log(els)
 
 const tree = html`
   <body class="w-100 sans-serif">
