@@ -6,6 +6,7 @@ Dat UI elements.
 
 ## Usage
 ```js
+var Loader = require('dat-elements/loader')
 var Sprite = require('dat-elements/sprite')
 var Icon = require('dat-elements/icon')
 
@@ -16,9 +17,16 @@ document.body.appendChild(sprite)
 // select an icon from the sprite!
 var icon = Icon('happy-dat')
 document.body.appendChild(icon)
+
+// create a loader element
+var loader = Loader()
+document.body.appendChild(loader)
 ```
 
 ## API
+### `loader = Loader()`
+Create a smooth, pulsating loader.
+
 ### `sprite = Sprite()`
 Create a new SVG sprite that must be loaded onto the DOM as the first child
 element. Allows the icon element to work.

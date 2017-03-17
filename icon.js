@@ -17,8 +17,9 @@ function iconElement (iconName, opts) {
   assert.equal(typeof iconName, 'string', 'elements/icon: iconName should be type string')
   assert.equal(typeof opts, 'object', 'elements/icon: opts should be type object')
 
-  var classNames = 'icon-' + iconName + ' ' + prefix
-  if (opts.class) classNames += (' ' + opts.class)
+  var classNames = opts.class
+    ? prefix + ' ' + opts.class
+    : prefix
 
   return html`
     <svg viewBox="0 0 16 16" class=${classNames}>
