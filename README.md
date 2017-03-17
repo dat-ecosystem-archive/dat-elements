@@ -1,24 +1,38 @@
 # dat-elements [![stability][0]][1]
-[![npm version][2]][3] [![build status][4]][5] [![test coverage][6]][7]
+[![npm version][2]][3] [![build status][4]][5]
 [![downloads][8]][9] [![js-standard-style][10]][11]
 
 Dat UI elements.
 
 ## Usage
 ```js
-const datElements = require('dat-elements')
+var Sprite = require('dat-elements/sprite')
+var Icon = require('dat-elements/icon')
 
-const el = element.progress()
-document.body.appendChild(el)
+// load the SVG sprite containing all icons onto the DOM
+var sprite = Sprite()
+document.body.appendChild(sprite)
+
+// select an icon from the sprite!
+var icon = Icon('happy-dat')
+document.body.appendChild(icon)
 ```
 
 ## API
-### datElements
+### sprite = Sprite()
+Create a new SVG sprite that must be loaded onto the DOM as the first child
+element. Allows the icon element to work.
+
+### icon = Icon(iconName, [options])
+Create a new icon element, referencing an icon from the sprite.
 
 ## Installation
 ```sh
 $ npm install dat-elements
 ```
+
+## See Also
+- [dat-icons](https://github.com/Kriesse/dat-icons)
 
 ## License
 [MIT](https://tldrlegal.com/license/mit-license)

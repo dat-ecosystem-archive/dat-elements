@@ -4,10 +4,14 @@
   "description": "Dat UI elements",
   "main": "index.js",
   "scripts": {
-    "start": "bankai start --entry=example/index.js --js.transform=sheetify/transform --port 8088",
+    "start": "bankai start example",
     "deps": "dependency-check . && dependency-check . --extra --no-dev",
-    "test": "standard && npm run deps && NODE_ENV=test node test",
-    "test:cov": "standard && npm run deps && NODE_ENV=test istanbul cover test.js"
+    "test": "standard && npm run deps"
+  },
+  "browserify": {
+    "transform": [
+      "sheetify/transform"
+    ]
   },
   "repository": "datproject/dat-elements",
   "keywords": [
@@ -17,17 +21,14 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "base-elements": "^2.0.0",
-    "bel": "^4.5.0",
-    "sheetify": "^5.1.1",
-    "xtend": "^4.0.1"
+    "bel": "^4.5.1",
+    "dat-icons": "^2.1.0",
+    "sheetify": "^5.2.0"
   },
   "devDependencies": {
-    "bankai": "^3.3.1",
-    "choo": "^4.0.0-2",
+    "bankai": "^5.4.1",
     "dependency-check": "^2.6.0",
-    "istanbul": "^0.4.5",
-    "tachyons": "^4.5.4",
-    "tape": "^4.6.2"
+    "nanomount": "^1.0.1",
+    "standard": "^8.6.0"
   }
 }
