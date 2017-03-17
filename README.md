@@ -19,11 +19,11 @@ document.body.appendChild(icon)
 ```
 
 ## API
-### sprite = Sprite()
+### `sprite = Sprite()`
 Create a new SVG sprite that must be loaded onto the DOM as the first child
 element. Allows the icon element to work.
 
-### icon = Icon(iconName, [options])
+### `icon = Icon(iconName, [options])`
 Create a new icon element, referencing an icon from the sprite.
 
 ## Installation
