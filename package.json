@@ -4,7 +4,8 @@
   "description": "Dat UI elements",
   "main": "index.js",
   "scripts": {
-    "start": "bankai start example",
+    "start": "bankai start examples/basic",
+    "health": "bankai start examples/health",
     "deps": "dependency-check . && dependency-check . --extra --no-dev",
     "test": "standard && npm run deps"
   },
@@ -23,7 +24,9 @@
   "dependencies": {
     "bel": "^4.5.1",
     "dat-icons": "^2.1.0",
-    "sheetify": "^5.2.0"
+    "pretty-bytes": "^4.0.2",
+    "sheetify": "^5.2.0",
+    "tachyons": "^4.7.0"
   },
   "devDependencies": {
     "bankai": "^5.4.1",

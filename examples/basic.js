@@ -1,6 +1,6 @@
-var Loader = require('./loader')
-var Sprite = require('./sprite')
-var Icon = require('./icon')
+var Loader = require('../loader')
+var Sprite = require('../sprite')
+var Icon = require('../icon')
 var css = require('sheetify')
 
 var prefix = css`:host { color: blue }`
